@@ -4,15 +4,9 @@ import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import { Box } from '@material-ui/core';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 interface navbarProps { }
 
@@ -56,7 +50,7 @@ export const Navbar: React.FC<navbarProps> = () => {
        </Box>
                 </Toolbar>
             </AppBar>
-     
+
             <Drawer
                 className={classes.drawer}
                 variant="permanent"
@@ -67,38 +61,32 @@ export const Navbar: React.FC<navbarProps> = () => {
             >
                 <div className={classes.toolbar} />
                 <Divider />
-                <Router>
-                    <Box mx='auto'>
-                        Frontend Developer
+                <Box mx='auto'>
+                    Frontend Developer
+                    </Box>
+                <Box m='auto' display='flex'>
+                    <Box p={2}>
+                        <Link to={'/'}>
+                            HOME
+                    </Link>
                     </Box>
 
-                    <Box m='auto' display='flex'>
-
-                        <Box p={2}>
-                            <Link to={'/'}>
-                                HOME
+                    <Box p={2}>
+                        <Link to={'/about'}>
+                            ABOUT
                     </Link>
-                        </Box>
-
-                        <Box p={2}>
-                            <Link to={'/about'}>
-                                ABOUT
-                    </Link>
-                        </Box>
-                        <Box p={2}>
-                            <Link to={'/project'}>
-                                PROJECT
-                    </Link>
-                        </Box>
-                        <Box p={2}>
-                            <Link to={'/contact'}>
-                                CONTACT
-                    </Link>
-                        </Box>
-
                     </Box>
-
-                </Router>
+                    <Box p={2}>
+                        <Link to={'/projects'}>
+                            PROJECTS
+                    </Link>
+                    </Box>
+                    <Box p={2}>
+                        <Link to={'/contact'}>
+                            CONTACT
+                    </Link>
+                    </Box>
+                </Box>
             </Drawer>
         </div>
 
