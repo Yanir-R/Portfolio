@@ -27,6 +27,7 @@ const useStyles = makeStyles((theme: Theme) =>
         },
         drawerPaper: {
             width: drawerWidth,
+        
         },
         // necessary for content to be below app bar
         toolbar: theme.mixins.toolbar,
@@ -70,7 +71,6 @@ export const Navbar: React.FC<navbarProps> = () => {
                             HOME
                     </Link>
                     </Box>
-
                     <Box p={2}>
                         <Link to={'/about'}>
                             ABOUT
@@ -87,8 +87,10 @@ export const Navbar: React.FC<navbarProps> = () => {
                     </Link>
                     </Box>
                 </Box>
+             
             </Drawer>
-        </div>
+            </div>
+    
 
     );
 }
