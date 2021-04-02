@@ -2,9 +2,6 @@ import React from 'react'
 import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Divider from '@material-ui/core/Divider';
 import { Box } from '@material-ui/core';
 import { Link } from 'react-router-dom'
 
@@ -27,13 +24,13 @@ const useStyles = makeStyles((theme: Theme) =>
         },
         drawerPaper: {
             width: drawerWidth,
-        
+
         },
         // necessary for content to be below app bar
         toolbar: theme.mixins.toolbar,
         content: {
             flexGrow: 1,
-            backgroundColor: theme.palette.background.default,
+            backgroundColor: theme.palette.background.paper,
             padding: theme.spacing(3),
         },
 
@@ -44,24 +41,14 @@ export const Navbar: React.FC<navbarProps> = () => {
     return (
         <div className={classes.root}>
             <CssBaseline />
-            <AppBar position="fixed" className={classes.appBar}>
-                <Toolbar>
-                    <Box m='auto' >
-                        Portfolio
-       </Box>
-                </Toolbar>
-            </AppBar>
-
             <Drawer
-                className={classes.drawer}
+                className={classes.appBar}
                 variant="permanent"
                 classes={{
                     paper: classes.drawerPaper,
                 }}
-                anchor="right"
-            >
-                <div className={classes.toolbar} />
-                <Divider />
+                anchor="right" >
+                <div />
                 <Box mx='auto'>
                     Frontend Developer
                     </Box>
@@ -87,10 +74,10 @@ export const Navbar: React.FC<navbarProps> = () => {
                     </Link>
                     </Box>
                 </Box>
-             
+
             </Drawer>
-            </div>
-    
+        </div>
+
 
     );
 }
