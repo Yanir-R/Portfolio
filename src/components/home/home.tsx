@@ -1,27 +1,28 @@
-import { createStyles, makeStyles, Theme } from '@material-ui/core';
+import { Box, createStyles, makeStyles, Typography } from '@material-ui/core';
 import React from 'react'
 
 interface homeProps { }
 
-const useStyles = makeStyles((theme: Theme) =>
+const drawerWidth = 370;
+const useStyles = makeStyles(() =>
     createStyles({
-        // necessary for content to be below app bar
-        toolbar: theme.mixins.toolbar,
+        // necessary for component to be at the right size of the page
         content: {
-            flexGrow: 1,
-            backgroundColor: theme.palette.background.default,
-            padding: theme.spacing(5),
+         
+            marginRight: drawerWidth,
+            textAlign: 'center',
         },
+
     })
 )
 
 export const Home: React.FC<homeProps> = () => {
     const classes = useStyles()
     return (
-        <main className={classes.content}>
-            <div className={classes.toolbar}>
-                <h1>Home page</h1>
-            </div>
-        </main>
+        <Box className={classes.content}>
+            <Typography>
+                Home Page
+            </Typography>
+        </Box>
     );
 }

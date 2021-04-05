@@ -7,7 +7,6 @@ const useStyles = makeStyles(() =>
     createStyles({
         // necessary for component to be at the right size of the page
         content: {
-            width: `calc(100% - ${drawerWidth}px)`,
             marginRight: drawerWidth,
             textAlign: 'center',
         },
