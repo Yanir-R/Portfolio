@@ -1,14 +1,15 @@
-import { createStyles, Divider, Box, makeStyles, Typography, SvgIcon } from '@material-ui/core';
+import { createStyles, Divider, Box, makeStyles, Typography, SvgIcon, Theme } from '@material-ui/core';
 import React from 'react'
 
 interface aboutProps { }
 const drawerWidth = 370;
-const useStyles = makeStyles(() =>
+const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         // necessary for component to be at the right size of the page
         content: {
             marginRight: drawerWidth,
             textAlign: 'center',
+            color: theme.palette.common.white
         },
         skillsSection: {
 

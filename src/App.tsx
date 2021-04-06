@@ -18,7 +18,7 @@ export const App: React.FC<AppProps> = () => {
 
 
     <Router>
-      <div className="App" style={{ position: 'relative' }}>
+      <div className="App" style={{ position: 'relative', backgroundColor:'#0c0a0a',}}>
         <ParticlesComponenet />
         <div
           style={{
@@ -26,7 +26,7 @@ export const App: React.FC<AppProps> = () => {
             top: 0,
             left: 0,
             width: "100%",
-            height: "100%"
+            height: "100%",
           }}
         >
           <Navbar />
