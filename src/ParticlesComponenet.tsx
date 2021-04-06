@@ -47,7 +47,7 @@ export const ParticlesComponenet: React.FC<ParticlesComponenetProps> = () => {
                         }
                     },
                     "size": {
-                        "value": 2,
+                        "value": 1.5,
                         "random": true,
                         "anim": {
                             "enable": false,
@@ -65,7 +65,7 @@ export const ParticlesComponenet: React.FC<ParticlesComponenetProps> = () => {
                     },
                     "move": {
                         "enable": true,
-                        "speed": 3,
+                        "speed": 2,
                         "direction": "none",
                         "random": true,
                         "straight": false,
@@ -102,7 +102,7 @@ export const ParticlesComponenet: React.FC<ParticlesComponenetProps> = () => {
                             "distance": 400,
                             "size": 40,
                             "duration": 2,
-                            "opacity": 8,
+                            "opacity": 1,
 
                         },
                         "repulse": {
@@ -117,6 +117,8 @@ export const ParticlesComponenet: React.FC<ParticlesComponenetProps> = () => {
                         }
                     }
                 },
+
+
                 "retina_detect": true
             }} />
         </div>

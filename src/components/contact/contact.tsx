@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme: Theme) =>
         toolbar: theme.mixins.toolbar,
         content: {
             flexGrow: 1,
-            
+            color: theme.palette.common.white,
             padding: theme.spacing(5),
         },
     })
